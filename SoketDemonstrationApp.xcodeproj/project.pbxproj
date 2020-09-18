@@ -3,17 +3,49 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		FA3AA2A62511362A00D5789A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3AA2A52511362A00D5789A /* AppDelegate.swift */; };
 		FA3AA2A82511362A00D5789A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3AA2A72511362A00D5789A /* SceneDelegate.swift */; };
-		FA3AA2AA2511362A00D5789A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3AA2A92511362A00D5789A /* ViewController.swift */; };
 		FA3AA2AD2511362A00D5789A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA3AA2AB2511362A00D5789A /* Main.storyboard */; };
 		FA3AA2AF2511362C00D5789A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA3AA2AE2511362C00D5789A /* Assets.xcassets */; };
 		FA3AA2B22511362C00D5789A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA3AA2B02511362C00D5789A /* LaunchScreen.storyboard */; };
 		FA3AA2BD2511362C00D5789A /* SoketDemonstrationAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3AA2BC2511362C00D5789A /* SoketDemonstrationAppTests.swift */; };
+		FA3AA2CA2511366100D5789A /* MonitorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3AA2C92511366100D5789A /* MonitorViewController.swift */; };
+		FA3AA2CC2511367000D5789A /* MonitorViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA3AA2CB2511367000D5789A /* MonitorViewController.storyboard */; };
+		FA3AA2CE2511368200D5789A /* MonitorPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3AA2CD2511368200D5789A /* MonitorPresenter.swift */; };
+		FA3AA2D12511372300D5789A /* QuoteService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3AA2D02511372300D5789A /* QuoteService.swift */; };
+		FA3AA2D22511372300D5789A /* QuoteService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3AA2D02511372300D5789A /* QuoteService.swift */; };
+		FA3AA2D52511375B00D5789A /* Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3AA2D42511375B00D5789A /* Quote.swift */; };
+		FA3AA2D62511375B00D5789A /* Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3AA2D42511375B00D5789A /* Quote.swift */; };
+		FA3AA2E6251138F600D5789A /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3AA2DC251138F500D5789A /* Models.swift */; };
+		FA3AA2E7251138F600D5789A /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3AA2DC251138F500D5789A /* Models.swift */; };
+		FA3AA2EC2511393E00D5789A /* QuoteSocketRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3AA2EB2511393E00D5789A /* QuoteSocketRouter.swift */; };
+		FA3AA2ED2511393E00D5789A /* QuoteSocketRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3AA2EB2511393E00D5789A /* QuoteSocketRouter.swift */; };
+		FA3AA2F025113A3500D5789A /* SocketIO in Frameworks */ = {isa = PBXBuildFile; productRef = FA3AA2EF25113A3500D5789A /* SocketIO */; };
+		FA3AA30D25113E8000D5789A /* UIViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3AA30C25113E8000D5789A /* UIViewController+Ext.swift */; };
+		FA3AA30E25113E8000D5789A /* UIViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3AA30C25113E8000D5789A /* UIViewController+Ext.swift */; };
+		FA3AA3102511FD8200D5789A /* SoketManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3AA30F2511FD8200D5789A /* SoketManager.swift */; };
+		FA3AA3112511FD8200D5789A /* SoketManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3AA30F2511FD8200D5789A /* SoketManager.swift */; };
+		FA3AA313251203A300D5789A /* SoketRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3AA312251203A300D5789A /* SoketRouter.swift */; };
+		FA3AA314251203A300D5789A /* SoketRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3AA312251203A300D5789A /* SoketRouter.swift */; };
+		FAADCA8A2514185400A23768 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAADCA892514185400A23768 /* APIError.swift */; };
+		FAADCA8D2514240000A23768 /* QuoteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAADCA8C2514240000A23768 /* QuoteCell.swift */; };
+		FAADCA9025142A2500A23768 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = FAADCA8F25142A2500A23768 /* Kingfisher */; };
+		FAADCA9225142A3E00A23768 /* UIImageView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAADCA9125142A3E00A23768 /* UIImageView+Ext.swift */; };
+		FAADCA95251542BF00A23768 /* TabBarController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAADCA94251542BF00A23768 /* TabBarController.storyboard */; };
+		FAADCA972515490600A23768 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAADCA962515490600A23768 /* TabBarController.swift */; };
+		FAADCA9A25154BC200A23768 /* TopStocksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAADCA9925154BC200A23768 /* TopStocksViewController.swift */; };
+		FAADCA9C25154BCA00A23768 /* TopStocksViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAADCA9B25154BCA00A23768 /* TopStocksViewController.storyboard */; };
+		FAADCAA025154D0900A23768 /* QuoteCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAADCA9F25154D0900A23768 /* QuoteCell.xib */; };
+		FAADCAA8251553F300A23768 /* TopStocksPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAADCAA5251553BA00A23768 /* TopStocksPresenter.swift */; };
+		FAF292F925155A190020056B /* HTTPManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF292F825155A190020056B /* HTTPManager.swift */; };
+		FAF292FB25155A830020056B /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF292FA25155A830020056B /* Logger.swift */; };
+		FAF292FE25155F180020056B /* HTTPRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF292FD25155F180020056B /* HTTPRouter.swift */; };
+		FAF2930125155FEF0020056B /* QuoteHTTPRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF2930025155FEF0020056B /* QuoteHTTPRouter.swift */; };
+		FAF2930325156C8C0020056B /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF2930225156C8C0020056B /* APIService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,7 +62,6 @@
 		FA3AA2A22511362A00D5789A /* SoketDemonstrationApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SoketDemonstrationApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA3AA2A52511362A00D5789A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FA3AA2A72511362A00D5789A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		FA3AA2A92511362A00D5789A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FA3AA2AC2511362A00D5789A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FA3AA2AE2511362C00D5789A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FA3AA2B12511362C00D5789A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -38,6 +69,30 @@
 		FA3AA2B82511362C00D5789A /* SoketDemonstrationAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SoketDemonstrationAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA3AA2BC2511362C00D5789A /* SoketDemonstrationAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoketDemonstrationAppTests.swift; sourceTree = "<group>"; };
 		FA3AA2BE2511362C00D5789A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA3AA2C92511366100D5789A /* MonitorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonitorViewController.swift; sourceTree = "<group>"; };
+		FA3AA2CB2511367000D5789A /* MonitorViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MonitorViewController.storyboard; sourceTree = "<group>"; };
+		FA3AA2CD2511368200D5789A /* MonitorPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonitorPresenter.swift; sourceTree = "<group>"; };
+		FA3AA2D02511372300D5789A /* QuoteService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteService.swift; sourceTree = "<group>"; };
+		FA3AA2D42511375B00D5789A /* Quote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quote.swift; sourceTree = "<group>"; };
+		FA3AA2DC251138F500D5789A /* Models.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		FA3AA2EB2511393E00D5789A /* QuoteSocketRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteSocketRouter.swift; sourceTree = "<group>"; };
+		FA3AA30C25113E8000D5789A /* UIViewController+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Ext.swift"; sourceTree = "<group>"; };
+		FA3AA30F2511FD8200D5789A /* SoketManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoketManager.swift; sourceTree = "<group>"; };
+		FA3AA312251203A300D5789A /* SoketRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoketRouter.swift; sourceTree = "<group>"; };
+		FAADCA892514185400A23768 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
+		FAADCA8C2514240000A23768 /* QuoteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteCell.swift; sourceTree = "<group>"; };
+		FAADCA9125142A3E00A23768 /* UIImageView+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+Ext.swift"; sourceTree = "<group>"; };
+		FAADCA94251542BF00A23768 /* TabBarController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBarController.storyboard; sourceTree = "<group>"; };
+		FAADCA962515490600A23768 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		FAADCA9925154BC200A23768 /* TopStocksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopStocksViewController.swift; sourceTree = "<group>"; };
+		FAADCA9B25154BCA00A23768 /* TopStocksViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TopStocksViewController.storyboard; sourceTree = "<group>"; };
+		FAADCA9F25154D0900A23768 /* QuoteCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuoteCell.xib; sourceTree = "<group>"; };
+		FAADCAA5251553BA00A23768 /* TopStocksPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopStocksPresenter.swift; sourceTree = "<group>"; };
+		FAF292F825155A190020056B /* HTTPManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPManager.swift; sourceTree = "<group>"; };
+		FAF292FA25155A830020056B /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		FAF292FD25155F180020056B /* HTTPRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPRouter.swift; sourceTree = "<group>"; };
+		FAF2930025155FEF0020056B /* QuoteHTTPRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteHTTPRouter.swift; sourceTree = "<group>"; };
+		FAF2930225156C8C0020056B /* APIService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +100,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAADCA9025142A2500A23768 /* Kingfisher in Frameworks */,
+				FA3AA2F025113A3500D5789A /* SocketIO in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,9 +136,16 @@
 		FA3AA2A42511362A00D5789A /* SoketDemonstrationApp */ = {
 			isa = PBXGroup;
 			children = (
+				FAF292FF25155FB60020056B /* Routers */,
+				FA3AA2CF251136A600D5789A /* Services */,
+				FAF292FC25155A880020056B /* Managers */,
+				FAADCA8B251423DE00A23768 /* Cells */,
+				FA3AA30B25113E6400D5789A /* Helpers */,
+				FA3AA2D7251138CE00D5789A /* API */,
+				FA3AA2D32511373C00D5789A /* Models */,
+				FA3AA2C72511363500D5789A /* Scenes */,
 				FA3AA2A52511362A00D5789A /* AppDelegate.swift */,
 				FA3AA2A72511362A00D5789A /* SceneDelegate.swift */,
-				FA3AA2A92511362A00D5789A /* ViewController.swift */,
 				FA3AA2AB2511362A00D5789A /* Main.storyboard */,
 				FA3AA2AE2511362C00D5789A /* Assets.xcassets */,
 				FA3AA2B02511362C00D5789A /* LaunchScreen.storyboard */,
@@ -97,6 +161,142 @@
 				FA3AA2BE2511362C00D5789A /* Info.plist */,
 			);
 			path = SoketDemonstrationAppTests;
+			sourceTree = "<group>";
+		};
+		FA3AA2C72511363500D5789A /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				FAADCA93251542A200A23768 /* TabBar */,
+				FA3AA2C82511364000D5789A /* Monitor */,
+				FAADCA9825154BA100A23768 /* TopStocks */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		FA3AA2C82511364000D5789A /* Monitor */ = {
+			isa = PBXGroup;
+			children = (
+				FA3AA2CD2511368200D5789A /* MonitorPresenter.swift */,
+				FA3AA2C92511366100D5789A /* MonitorViewController.swift */,
+				FA3AA2CB2511367000D5789A /* MonitorViewController.storyboard */,
+			);
+			path = Monitor;
+			sourceTree = "<group>";
+		};
+		FA3AA2CF251136A600D5789A /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				FA3AA2D02511372300D5789A /* QuoteService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		FA3AA2D32511373C00D5789A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FA3AA2D42511375B00D5789A /* Quote.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		FA3AA2D7251138CE00D5789A /* API */ = {
+			isa = PBXGroup;
+			children = (
+				FAF2930225156C8C0020056B /* APIService.swift */,
+				FAF292F7251559BB0020056B /* PromiseKit */,
+				FAF292F6251558E40020056B /* Errors */,
+				FAF292F5251554F10020056B /* Soket */,
+				FAF292F4251554E10020056B /* HTTP */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		FA3AA30B25113E6400D5789A /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				FAADCA9125142A3E00A23768 /* UIImageView+Ext.swift */,
+				FA3AA30C25113E8000D5789A /* UIViewController+Ext.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		FAADCA8B251423DE00A23768 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				FAADCA8C2514240000A23768 /* QuoteCell.swift */,
+				FAADCA9F25154D0900A23768 /* QuoteCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		FAADCA93251542A200A23768 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				FAADCA962515490600A23768 /* TabBarController.swift */,
+				FAADCA94251542BF00A23768 /* TabBarController.storyboard */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		FAADCA9825154BA100A23768 /* TopStocks */ = {
+			isa = PBXGroup;
+			children = (
+				FAADCAA5251553BA00A23768 /* TopStocksPresenter.swift */,
+				FAADCA9925154BC200A23768 /* TopStocksViewController.swift */,
+				FAADCA9B25154BCA00A23768 /* TopStocksViewController.storyboard */,
+			);
+			path = TopStocks;
+			sourceTree = "<group>";
+		};
+		FAF292F4251554E10020056B /* HTTP */ = {
+			isa = PBXGroup;
+			children = (
+				FAF292F825155A190020056B /* HTTPManager.swift */,
+				FAF292FD25155F180020056B /* HTTPRouter.swift */,
+			);
+			path = HTTP;
+			sourceTree = "<group>";
+		};
+		FAF292F5251554F10020056B /* Soket */ = {
+			isa = PBXGroup;
+			children = (
+				FA3AA30F2511FD8200D5789A /* SoketManager.swift */,
+				FA3AA312251203A300D5789A /* SoketRouter.swift */,
+			);
+			path = Soket;
+			sourceTree = "<group>";
+		};
+		FAF292F6251558E40020056B /* Errors */ = {
+			isa = PBXGroup;
+			children = (
+				FAADCA892514185400A23768 /* APIError.swift */,
+			);
+			path = Errors;
+			sourceTree = "<group>";
+		};
+		FAF292F7251559BB0020056B /* PromiseKit */ = {
+			isa = PBXGroup;
+			children = (
+				FA3AA2DC251138F500D5789A /* Models.swift */,
+			);
+			path = PromiseKit;
+			sourceTree = "<group>";
+		};
+		FAF292FC25155A880020056B /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				FAF292FA25155A830020056B /* Logger.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		FAF292FF25155FB60020056B /* Routers */ = {
+			isa = PBXGroup;
+			children = (
+				FA3AA2EB2511393E00D5789A /* QuoteSocketRouter.swift */,
+				FAF2930025155FEF0020056B /* QuoteHTTPRouter.swift */,
+			);
+			path = Routers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -115,6 +315,10 @@
 			dependencies = (
 			);
 			name = SoketDemonstrationApp;
+			packageProductDependencies = (
+				FA3AA2EF25113A3500D5789A /* SocketIO */,
+				FAADCA8F25142A2500A23768 /* Kingfisher */,
+			);
 			productName = SoketDemonstrationApp;
 			productReference = FA3AA2A22511362A00D5789A /* SoketDemonstrationApp.app */;
 			productType = "com.apple.product-type.application";
@@ -165,6 +369,10 @@
 				Base,
 			);
 			mainGroup = FA3AA2992511362A00D5789A;
+			packageReferences = (
+				FA3AA2EE25113A3500D5789A /* XCRemoteSwiftPackageReference "socket" */,
+				FAADCA8E25142A2500A23768 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = FA3AA2A32511362A00D5789A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -180,9 +388,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAADCAA025154D0900A23768 /* QuoteCell.xib in Resources */,
 				FA3AA2B22511362C00D5789A /* LaunchScreen.storyboard in Resources */,
+				FAADCA95251542BF00A23768 /* TabBarController.storyboard in Resources */,
 				FA3AA2AF2511362C00D5789A /* Assets.xcassets in Resources */,
 				FA3AA2AD2511362A00D5789A /* Main.storyboard in Resources */,
+				FAADCA9C25154BCA00A23768 /* TopStocksViewController.storyboard in Resources */,
+				FA3AA2CC2511367000D5789A /* MonitorViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -200,8 +412,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA3AA2AA2511362A00D5789A /* ViewController.swift in Sources */,
+				FAF292FB25155A830020056B /* Logger.swift in Sources */,
+				FA3AA2CE2511368200D5789A /* MonitorPresenter.swift in Sources */,
+				FAADCA9A25154BC200A23768 /* TopStocksViewController.swift in Sources */,
+				FAF292F925155A190020056B /* HTTPManager.swift in Sources */,
+				FAF2930325156C8C0020056B /* APIService.swift in Sources */,
+				FA3AA30D25113E8000D5789A /* UIViewController+Ext.swift in Sources */,
+				FAF2930125155FEF0020056B /* QuoteHTTPRouter.swift in Sources */,
+				FA3AA2D12511372300D5789A /* QuoteService.swift in Sources */,
+				FAADCA972515490600A23768 /* TabBarController.swift in Sources */,
+				FAADCAA8251553F300A23768 /* TopStocksPresenter.swift in Sources */,
+				FAADCA8D2514240000A23768 /* QuoteCell.swift in Sources */,
+				FA3AA2E6251138F600D5789A /* Models.swift in Sources */,
 				FA3AA2A62511362A00D5789A /* AppDelegate.swift in Sources */,
+				FAADCA9225142A3E00A23768 /* UIImageView+Ext.swift in Sources */,
+				FAF292FE25155F180020056B /* HTTPRouter.swift in Sources */,
+				FA3AA2EC2511393E00D5789A /* QuoteSocketRouter.swift in Sources */,
+				FA3AA313251203A300D5789A /* SoketRouter.swift in Sources */,
+				FA3AA2CA2511366100D5789A /* MonitorViewController.swift in Sources */,
+				FA3AA2D52511375B00D5789A /* Quote.swift in Sources */,
+				FAADCA8A2514185400A23768 /* APIError.swift in Sources */,
+				FA3AA3102511FD8200D5789A /* SoketManager.swift in Sources */,
 				FA3AA2A82511362A00D5789A /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -210,7 +441,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA3AA30E25113E8000D5789A /* UIViewController+Ext.swift in Sources */,
+				FA3AA2D22511372300D5789A /* QuoteService.swift in Sources */,
+				FA3AA2D62511375B00D5789A /* Quote.swift in Sources */,
+				FA3AA2ED2511393E00D5789A /* QuoteSocketRouter.swift in Sources */,
+				FA3AA3112511FD8200D5789A /* SoketManager.swift in Sources */,
+				FA3AA2E7251138F600D5789A /* Models.swift in Sources */,
 				FA3AA2BD2511362C00D5789A /* SoketDemonstrationAppTests.swift in Sources */,
+				FA3AA314251203A300D5789A /* SoketRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -469,6 +707,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		FA3AA2EE25113A3500D5789A /* XCRemoteSwiftPackageReference "socket" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/socketio/socket.io-client-swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 15.2.0;
+			};
+		};
+		FAADCA8E25142A2500A23768 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.15.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		FA3AA2EF25113A3500D5789A /* SocketIO */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FA3AA2EE25113A3500D5789A /* XCRemoteSwiftPackageReference "socket" */;
+			productName = SocketIO;
+		};
+		FAADCA8F25142A2500A23768 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FAADCA8E25142A2500A23768 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = FA3AA29A2511362A00D5789A /* Project object */;
 }

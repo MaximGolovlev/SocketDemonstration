@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="J04-ne-VSB">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Top Tickers-->
+        <scene sceneID="wyN-i6-XtM">
+            <objects>
+                <viewController id="oM1-4U-euA" customClass="TopStocksViewController" customModule="SoketDemonstrationApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9H4-Lt-B4e">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="IQm-93-pib">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TickerCell" rowHeight="61" id="TGh-DX-fUR">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="61"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="TGh-DX-fUR" id="pXt-BC-TUF">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="61"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="oM1-4U-euA" id="eMC-no-2Sz"/>
+                                    <outlet property="delegate" destination="oM1-4U-euA" id="PdU-xM-utr"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="IQm-93-pib" firstAttribute="leading" secondItem="aq0-SH-Iff" secondAttribute="leading" id="BZx-aa-eJC"/>
+                            <constraint firstItem="aq0-SH-Iff" firstAttribute="trailing" secondItem="IQm-93-pib" secondAttribute="trailing" id="V6g-OW-3dh"/>
+                            <constraint firstItem="aq0-SH-Iff" firstAttribute="bottom" secondItem="IQm-93-pib" secondAttribute="bottom" id="j95-T2-jsa"/>
+                            <constraint firstItem="IQm-93-pib" firstAttribute="top" secondItem="aq0-SH-Iff" secondAttribute="top" id="qYg-K9-kmG"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="aq0-SH-Iff"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Top Tickers" id="Dmb-Yb-FER"/>
+                    <connections>
+                        <outlet property="tableView" destination="IQm-93-pib" id="v3I-wO-0R3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HxA-iH-vTL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1186.9565217391305" y="112.5"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="3Z1-R8-ayD">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="J04-ne-VSB" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="best_stocks" selectedImage="best_stocks_selected" id="LI1-Nf-hbG"/>
+                    <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ePJ-rP-r4Z">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="oM1-4U-euA" kind="relationship" relationship="rootViewController" id="f4q-ey-xrS"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ILg-K4-hU6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="276.81159420289856" y="112.5"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="best_stocks" width="28" height="28"/>
+        <image name="best_stocks_selected" width="28" height="28"/>
+    </resources>
+</document>
