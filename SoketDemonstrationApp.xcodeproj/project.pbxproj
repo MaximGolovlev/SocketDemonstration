@@ -31,6 +31,7 @@
 		FA3AA3112511FD8200D5789A /* SoketManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3AA30F2511FD8200D5789A /* SoketManager.swift */; };
 		FA3AA313251203A300D5789A /* SoketRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3AA312251203A300D5789A /* SoketRouter.swift */; };
 		FA3AA314251203A300D5789A /* SoketRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3AA312251203A300D5789A /* SoketRouter.swift */; };
+		FA91EB7D25158120001B3693 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF2930225156C8C0020056B /* APIService.swift */; };
 		FAADCA8A2514185400A23768 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAADCA892514185400A23768 /* APIError.swift */; };
 		FAADCA8D2514240000A23768 /* QuoteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAADCA8C2514240000A23768 /* QuoteCell.swift */; };
 		FAADCA9025142A2500A23768 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = FAADCA8F25142A2500A23768 /* Kingfisher */; };
@@ -136,13 +137,13 @@
 		FA3AA2A42511362A00D5789A /* SoketDemonstrationApp */ = {
 			isa = PBXGroup;
 			children = (
-				FAF292FF25155FB60020056B /* Routers */,
-				FA3AA2CF251136A600D5789A /* Services */,
-				FAF292FC25155A880020056B /* Managers */,
-				FAADCA8B251423DE00A23768 /* Cells */,
 				FA3AA30B25113E6400D5789A /* Helpers */,
 				FA3AA2D7251138CE00D5789A /* API */,
+				FA3AA2CF251136A600D5789A /* Services */,
+				FAF292FF25155FB60020056B /* Routers */,
+				FAF292FC25155A880020056B /* Managers */,
 				FA3AA2D32511373C00D5789A /* Models */,
+				FAADCA8B251423DE00A23768 /* Cells */,
 				FA3AA2C72511363500D5789A /* Scenes */,
 				FA3AA2A52511362A00D5789A /* AppDelegate.swift */,
 				FA3AA2A72511362A00D5789A /* SceneDelegate.swift */,
@@ -448,6 +449,7 @@
 				FA3AA3112511FD8200D5789A /* SoketManager.swift in Sources */,
 				FA3AA2E7251138F600D5789A /* Models.swift in Sources */,
 				FA3AA2BD2511362C00D5789A /* SoketDemonstrationAppTests.swift in Sources */,
+				FA91EB7D25158120001B3693 /* APIService.swift in Sources */,
 				FA3AA314251203A300D5789A /* SoketRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
