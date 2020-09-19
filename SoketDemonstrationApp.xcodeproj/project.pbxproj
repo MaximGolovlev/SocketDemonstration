@@ -34,7 +34,6 @@
 		FA91EB7D25158120001B3693 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF2930225156C8C0020056B /* APIService.swift */; };
 		FAADCA8A2514185400A23768 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAADCA892514185400A23768 /* APIError.swift */; };
 		FAADCA8D2514240000A23768 /* QuoteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAADCA8C2514240000A23768 /* QuoteCell.swift */; };
-		FAADCA9025142A2500A23768 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = FAADCA8F25142A2500A23768 /* Kingfisher */; };
 		FAADCA9225142A3E00A23768 /* UIImageView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAADCA9125142A3E00A23768 /* UIImageView+Ext.swift */; };
 		FAADCA95251542BF00A23768 /* TabBarController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAADCA94251542BF00A23768 /* TabBarController.storyboard */; };
 		FAADCA972515490600A23768 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAADCA962515490600A23768 /* TabBarController.swift */; };
@@ -47,6 +46,7 @@
 		FAF292FE25155F180020056B /* HTTPRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF292FD25155F180020056B /* HTTPRouter.swift */; };
 		FAF2930125155FEF0020056B /* QuoteHTTPRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF2930025155FEF0020056B /* QuoteHTTPRouter.swift */; };
 		FAF2930325156C8C0020056B /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF2930225156C8C0020056B /* APIService.swift */; };
+		FAFE643D25163B9E009C900B /* Animator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFE643C25163B9E009C900B /* Animator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,6 +94,7 @@
 		FAF292FD25155F180020056B /* HTTPRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPRouter.swift; sourceTree = "<group>"; };
 		FAF2930025155FEF0020056B /* QuoteHTTPRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteHTTPRouter.swift; sourceTree = "<group>"; };
 		FAF2930225156C8C0020056B /* APIService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		FAFE643C25163B9E009C900B /* Animator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,7 +102,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FAADCA9025142A2500A23768 /* Kingfisher in Frameworks */,
 				FA3AA2F025113A3500D5789A /* SocketIO in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -287,6 +287,7 @@
 			isa = PBXGroup;
 			children = (
 				FAF292FA25155A830020056B /* Logger.swift */,
+				FAFE643C25163B9E009C900B /* Animator.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -318,7 +319,6 @@
 			name = SoketDemonstrationApp;
 			packageProductDependencies = (
 				FA3AA2EF25113A3500D5789A /* SocketIO */,
-				FAADCA8F25142A2500A23768 /* Kingfisher */,
 			);
 			productName = SoketDemonstrationApp;
 			productReference = FA3AA2A22511362A00D5789A /* SoketDemonstrationApp.app */;
@@ -372,7 +372,6 @@
 			mainGroup = FA3AA2992511362A00D5789A;
 			packageReferences = (
 				FA3AA2EE25113A3500D5789A /* XCRemoteSwiftPackageReference "socket" */,
-				FAADCA8E25142A2500A23768 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = FA3AA2A32511362A00D5789A /* Products */;
 			projectDirPath = "";
@@ -434,6 +433,7 @@
 				FA3AA2D52511375B00D5789A /* Quote.swift in Sources */,
 				FAADCA8A2514185400A23768 /* APIError.swift in Sources */,
 				FA3AA3102511FD8200D5789A /* SoketManager.swift in Sources */,
+				FAFE643D25163B9E009C900B /* Animator.swift in Sources */,
 				FA3AA2A82511362A00D5789A /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -719,14 +719,6 @@
 				minimumVersion = 15.2.0;
 			};
 		};
-		FAADCA8E25142A2500A23768 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/onevcat/Kingfisher";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 5.15.1;
-			};
-		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -734,11 +726,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = FA3AA2EE25113A3500D5789A /* XCRemoteSwiftPackageReference "socket" */;
 			productName = SocketIO;
-		};
-		FAADCA8F25142A2500A23768 /* Kingfisher */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = FAADCA8E25142A2500A23768 /* XCRemoteSwiftPackageReference "Kingfisher" */;
-			productName = Kingfisher;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

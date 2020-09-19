@@ -8,6 +8,24 @@
 
 import Foundation
 
+enum ImageDownloaderError: Error {
+    case invalidUrl
+    case imageDownloadingError(error: Error)
+    case imageIsTooSmall
+    
+    var localizedDescription: String {
+        
+        switch self {
+        case .invalidUrl:
+            return "Image downloader provided with invalid url"
+        case .imageDownloadingError(let error):
+            return "Image download stopped with error: \(error.localizedDescription)"
+        case .imageIsTooSmall:
+            return "Downloaded image is too small"
+        }
+    }
+}
+
 enum HTTPError: Error {
     case invalidUrl
     case connectionError

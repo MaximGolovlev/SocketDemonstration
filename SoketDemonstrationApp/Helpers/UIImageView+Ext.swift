@@ -6,23 +6,73 @@
 //  Copyright © 2019 Golovelv Maxim. All rights reserved.
 //
 
-import Kingfisher
 import UIKit
+
+let imageCache = NSCache<NSString, UIImage>()
 
 extension UIImageView {
     
-    func setImage(urlString: String?, placeholder: UIImage? = nil, completion: ((UIImage) -> ())? = nil) {
+    func setImage(urlString : String?, filterTrash: Bool = true, animation: ImageTransition = .fade(0.5)) {
         
-        guard let urlString = urlString else { return }
+        loadImage(urlString: urlString)
+            .filterSmallerThen(size: CGSize(width: 5, height: 5))
+            .show(on: self, animation: animation)
+    }
+    
+    func loadImage(urlString : String?) -> Future<UIImage> {
+        
+        let promise = Promise<UIImage>()
+        
+        guard let urlString = urlString, let url = URL(string: urlString) else {
+            promise.reject(with: ImageDownloaderError.invalidUrl)
+            return promise
+        }
 
-        kf.setImage(with: URL(string: urlString), placeholder: placeholder, options: [
-            .scaleFactor(UIScreen.main.scale),
-            .transition(.fade(0.3))
-        ]) { result in
-            if case .success(let image) = result {
-                completion?(image.image)
+        // check cached image
+        if let cachedImage = imageCache.object(forKey: urlString as NSString)  {
+            promise.resolve(with: cachedImage)
+            return promise
+        }
+        
+        // if not, download image from url
+        URLSession.shared.dataTask(with: url, completionHandler: { (data, response, error) in
+            if let error = error {
+                promise.reject(with: ImageDownloaderError.imageDownloadingError(error: error))
+                return
+            }
+
+            DispatchQueue.main.async {
+                if let image = UIImage(data: data!) {
+                    imageCache.setObject(image, forKey: urlString as NSString)
+                    promise.resolve(with: image)
+                }
+            }
+
+        }).resume()
+        
+        return promise
+    }
+}
+
+extension Future where Value == UIImage {
+    
+    @discardableResult
+    func filterSmallerThen(size: CGSize) -> Future<UIImage> {
+        transformed { image in
+            if image.size.width < size.width {
+                throw ImageDownloaderError.imageIsTooSmall
+            } else {
+                return image
             }
         }
     }
     
+    func show(on imageView: UIImageView, animation: ImageTransition) {
+        observe { (result) in
+            if case .fade(let duration) = animation, case .success(let image) = result {
+                FadeImageAnimator().animate(imageView: imageView, image: image, duration: duration)
+            }
+        }
+    }
 }
+
