@@ -22,23 +22,19 @@ class Future<Value> {
     private var shouldDispose: Bool = true
     
     @discardableResult
-    func observe(shouldDispose: Bool = true, using callback: @escaping (Result) -> Void) -> URLSessionDataTask? {
+    func observe(using callback: @escaping (Result) -> Void) -> URLSessionDataTask? {
         // If a result has already been set, call the callback directly:
         if let result = result {
             callback(result)
             return task
         }
-        self.shouldDispose = shouldDispose
+
         callbacks.append(callback)
         return task
     }
     
     private func report(result: Result) {
         callbacks.forEach { $0(result) }
-        
-        if shouldDispose {
-            callbacks = []
-        }
     }
 }
 

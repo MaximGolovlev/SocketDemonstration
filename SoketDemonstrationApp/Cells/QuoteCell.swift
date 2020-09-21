@@ -13,6 +13,7 @@ class QuoteCell: UITableViewCell {
     @IBOutlet weak var logoView: UIImageView?
     @IBOutlet weak var tickerLabel: UILabel!
     @IBOutlet weak var pcpLabel: UILabel!
+    @IBOutlet weak var pcpBgView: UIView!
     @IBOutlet weak var ltrLabel: UILabel!
     @IBOutlet weak var ltpLabel: UILabel!
     @IBOutlet weak var chgLabel: UILabel!
@@ -24,17 +25,12 @@ class QuoteCell: UITableViewCell {
             logoView?.setImage(urlString: quote.imageUrl)
             tickerLabel.text = quote.c
             ltrLabel.text = [quote.ltr, quote.name].compactMap({ $0 }).joined(separator: " | ")
-            if let pcp = quote.pcp {
-                let plus = pcp > 0 ? "+" : ""
-                pcpLabel.text = "\(plus)\(pcp)"
-            }
-            if let ltp = quote.ltp {
-                ltpLabel.text = "\(ltp)"
-            }
-            if let chg = quote.chg {
-                let plus = chg > 0 ? "+" : ""
-                chgLabel.text = "( \(plus)\(chg) )"
-            }
+            pcpLabel.text = quote.pcpString
+            pcpLabel.textColor = quote.pcpColor.textColor
+            pcpBgView.backgroundColor = quote.pcpColor.bgColor
+            ltpLabel.text = quote.ltp
+            chgLabel.text = quote.chgString
+            
         }
     }
     

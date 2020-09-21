@@ -17,14 +17,14 @@ class QuoteService: APIService {
         
         let r = QuoteSocketRouter.quotesChangeSubscribtion(tickersToWatch: tickers)
         
-        socketManager = try SoketManager(socketURL: r.baseUrl, config: [.log(true), .compress])
+        socketManager = try SoketManager(socketURL: r.baseUrl, config: [/*.log(true), .compress*/])
         
         socketManager?
             .connectIfNeeded()
             .emit(event: r.requestEvent, items: r.soketData)
             .handle(event: r.responseEvent)
             .decodeSocketResponse(event: r.responseEvent)
-            .observe(shouldDispose: false, using: completion)
+            .observe(using: completion)
     }
     
     func fetchTopTickers(type: String, exchange: String, gainers: Bool, limit: Int, completion: @escaping (Result<[String], Error>) -> Void) -> URLSessionDataTask? {

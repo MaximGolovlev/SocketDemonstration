@@ -10,31 +10,36 @@ import UIKit
 
 let imageCache = NSCache<NSString, UIImage>()
 
+struct ImageLoadingParameters {
+    var image: UIImage = UIImage()
+    var animation: ImageTransition
+}
+
 extension UIImageView {
     
-    func setImage(urlString : String?, filterTrash: Bool = true, animation: ImageTransition = .fade(0.5)) {
+    func setImage(urlString : String?, animation: ImageTransition = .fade(0.5)) {
         
-        loadImage(urlString: urlString)
+        let params = ImageLoadingParameters(animation: animation)
+        
+        loadImage(urlString: urlString, params: params)
             .filterSmallerThen(size: CGSize(width: 5, height: 5))
-            .show(on: self, animation: animation)
+            .show(on: self)
     }
     
-    func loadImage(urlString : String?) -> Future<UIImage> {
+    func loadImage(urlString : String?, params: ImageLoadingParameters) -> Future<ImageLoadingParameters> {
         
-        let promise = Promise<UIImage>()
+        let promise = Promise<ImageLoadingParameters>()
         
         guard let urlString = urlString, let url = URL(string: urlString) else {
             promise.reject(with: ImageDownloaderError.invalidUrl)
             return promise
         }
 
-        // check cached image
         if let cachedImage = imageCache.object(forKey: urlString as NSString)  {
-            promise.resolve(with: cachedImage)
+            promise.resolve(with: ImageLoadingParameters(image: cachedImage, animation: .none))
             return promise
         }
         
-        // if not, download image from url
         URLSession.shared.dataTask(with: url, completionHandler: { (data, response, error) in
             if let error = error {
                 promise.reject(with: ImageDownloaderError.imageDownloadingError(error: error))
@@ -44,7 +49,7 @@ extension UIImageView {
             DispatchQueue.main.async {
                 if let image = UIImage(data: data!) {
                     imageCache.setObject(image, forKey: urlString as NSString)
-                    promise.resolve(with: image)
+                    promise.resolve(with: ImageLoadingParameters(image: image, animation: params.animation))
                 }
             }
 
@@ -54,23 +59,27 @@ extension UIImageView {
     }
 }
 
-extension Future where Value == UIImage {
+extension Future where Value == ImageLoadingParameters {
     
     @discardableResult
-    func filterSmallerThen(size: CGSize) -> Future<UIImage> {
-        transformed { image in
-            if image.size.width < size.width {
+    func filterSmallerThen(size: CGSize) -> Future<ImageLoadingParameters> {
+        transformed { params in
+            if params.image.size.width < size.width {
                 throw ImageDownloaderError.imageIsTooSmall
             } else {
-                return image
+                return ImageLoadingParameters(image: params.image, animation: params.animation)
             }
         }
     }
     
-    func show(on imageView: UIImageView, animation: ImageTransition) {
+    func show(on imageView: UIImageView) {
         observe { (result) in
-            if case .fade(let duration) = animation, case .success(let image) = result {
-                FadeImageAnimator().animate(imageView: imageView, image: image, duration: duration)
+            if case .success(let params) = result {
+                if case .fade(let duration) = params.animation {
+                    FadeImageAnimator().animate(imageView: imageView, image: params.image, duration: duration)
+                } else {
+                    imageView.image = params.image
+                }
             }
         }
     }
